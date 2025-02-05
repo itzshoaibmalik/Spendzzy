@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="common.css" />
+    <title>Essentials | Budget</title>
+  </head>
+
+  <body>
+   
+    <section class="section__container featured__container">
+      <h1 class="section__header" style="font-family:Poppins; background-color: antiquewhite; display: inline; text-align: center; font-size: 55px;">Debit / Credit Card Operations</h1>
+
+        <div class="featured__content">
+          <h4 style="font-family:Poppins;">Budgeting in finance is a critical tool for managing your money wisely. Here's a concise and precise guide for beginners:</h4>
+          <p style="font-size: 16px;" style="font-family: 'Times New Roman', Times, serif;">
+            1. &nbsp; Track Your Income: Know how much moneyyou earn monthly or annually after taxes. <br><br>
+            2. &nbsp; List Your Expenses: Record all your regular expenses, including housing, groceries, transportation, utilities, and entertainment and Categorize them. <br><br>
+            3. &nbsp; Create a Budget: Allocate a specific amount of your income to each expense category. Ensure your total expenses are less than your income. <br><br>
+            4. &nbsp; Emergency Fund: Set aside a portion of your income for unexpected expenses in an emergency fund. <br><br>
+            5. &nbsp; Save and Invest: Allocate a portion of your budget for savings and investments to build wealth over time. Track your spendings and keep a check if there is any need to adjust or not. <br><br>
+            6. &nbsp; Pay Down Debt: Prioritize paying off high-interest debts to reduce financial stress. <br><br>
+            7. &nbsp; Automate Savings: Set up automatic transfers to your savings or investment accounts to ensure consistency. <br><br>
+          </p>
+
+          <h2 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Video Explanation</h2><br>
+          <h2 style="text-align: left; font-family: 'Times New Roman', Times, serif;">&emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;In English &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp; &emsp;&emsp;  &emsp;&emsp;  &emsp;&emsp;   In Hindi</h2> <br>
+          <!-- <h3 style="text-align: right;">In Hindi</h3><br> -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/HQzoZfc3GwQ?si=vq06a8ziTgvXJvxv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          &emsp;&emsp;
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/AIOR1x7fPcQ?si=B0IqDzn6X9ZBAa-d" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section>
+      <style>
+        .quiz-container {
+            background-color: antiquewhite;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            height: 320px;
+            max-width: 500px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .question {
+            font-weight: bold;
+            font-size:19px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+            font-size:19px;
+        }
+        .options li {
+            margin: 10px 0;
+        }
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+  <h1 style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 35px;">Quizes</h1><br>
+    <div class="quiz-container">
+        <div class="question" id="question">Question goes here</div>
+        <ul class="options" id="options">
+            <li>
+                <input type="radio" name="choice" id="choiceA" value="A">
+                <label for="choiceA">Option A</label>
+            </li>
+            <li>
+                <input type="radio" name="choice" id="choiceB" value="B">
+                <label for="choiceB">Option B</label>
+            </li>
+            <li>
+                <input type="radio" name="choice" id="choiceC" value="C">
+                <label for="choiceC">Option C</label>
+            </li>
+            <li>
+                <input type="radio" name="choice" id="choiceD" value="D">
+                <label for="choiceD">Option D</label>
+            </li>
+        </ul>
+        <button onclick="checkAnswer()">Submit</button>
+    </div>
+    
+    <script>
+        // Define your questions and correct answers here
+        const questions = [
+            {
+                question: "What is the term for a detailed plan showing expected income and expenses?",
+                choices: ["Expense", "Savings", "Budget", "Credit"],
+                correct: "Budget"
+            },
+            {
+                question: "What do you call money set aside for future use or emergencies?",
+                choices: ["Budget", "Expense", "Savings", "Credit"],
+                correct: "Savings"
+            },
+            {
+                question: "What is the term for the money you earn, typically from a job or investments?",
+                choices: ["Expense", "Savings", "Budget", "Income"],
+                correct: "Income"
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        const questionElement = document.getElementById('question');
+        const optionsElement = document.getElementById('options');
+
+        // Function to display the current question
+        function displayQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+            optionsElement.innerHTML = '';
+            currentQuestion.choices.forEach((choice, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <input type="radio" name="choice" id="choice${index}" value="${choice}">
+                    <label for="choice${index}">${choice}</label>`;
+                optionsElement.appendChild(li);
+            });
+        }
+
+        // Function to check the selected answer
+        function checkAnswer() {
+            const selectedChoice = document.querySelector('input[name="choice"]:checked');
+            if (!selectedChoice) {
+                alert('Please select an answer.');
+                return;
+            }
+
+            const selectedAnswer = selectedChoice.value;
+            const currentQuestion = questions[currentQuestionIndex];
+
+            if (selectedAnswer === currentQuestion.correct) {
+                alert('Correct!');
+            } else {
+                alert(`Incorrect. The correct answer is: ${currentQuestion.correct}`);
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < questions.length) {
+                displayQuestion();
+            } else {
+                alert('Quiz finished!');
+            }
+        }
+
+        // Initial question display
+        displayQuestion();
+       </script>
+    </section>
+    <br><br> <br>
+  </body>
+</html>
